@@ -26,5 +26,16 @@ The output file should be named the same as the C file, but with the extension `
 Example: if the C file is `main.c`, the output file should be `main.s`
 ### 3-name
 Compiles a C file and creates an executable named `cisfun`.
-
+\
 The C file name will be saved in the variable `$CFILE`
+## What each C program does
+### 4-puts.c
+Prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
+\
+\
+Use the function puts
+\
+You are not allowed to use printf
+\
+Your program should end with the value 0
+
