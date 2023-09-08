@@ -1,2 +1,6 @@
 # .out files
 *.out
+
+# test folder
+*/temp-tests
+
