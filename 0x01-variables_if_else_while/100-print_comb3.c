@@ -11,7 +11,7 @@ int main(void)
 {
 	int left_num;
 	int right_num;
-	
+
 	/* For the left number */
 	for (left_num = 48; left_num <= 56; left_num++)
 	{
