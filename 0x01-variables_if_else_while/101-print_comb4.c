@@ -29,7 +29,7 @@ int main(void)
 				/* add the comma and space */
 				/* but not after the last digit in the print*/
 				if (left == '7' && mid == '8' && right == '9')
-					break;
+					continue;
 
 				putchar(',');
 				putchar(' ');
