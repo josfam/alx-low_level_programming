@@ -23,6 +23,7 @@ int main(void)
 			{
 				putchar(left_num);
 				putchar(right_num);
+				/* special case for 89 */
 				if (left_num == 56 && right_num == 57)
 				{
 					continue;
