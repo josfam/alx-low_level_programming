@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -9,7 +10,7 @@
  */
 int main(void)
 {
-	printf("_putchar\n");
+	write(1, "_putchar\n", strlen("_putchar\n"));
 	return (0);
 }
 
