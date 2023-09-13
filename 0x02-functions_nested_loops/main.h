@@ -19,3 +19,6 @@ int print_sign(int n);
 /* Computes the absoulute value of an integer */
 int _abs(int);
 
+/* Prints the last digit of a number */
+int print_last_digit(int);
+
