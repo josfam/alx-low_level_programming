@@ -1,3 +1,6 @@
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
+
 /* prints a char to the screen*/
 void _putchar(char ch);
 
@@ -25,3 +28,4 @@ int print_last_digit(int);
 /* Prints every minute of the day of Jack Bauer */
 void jack_bauer(void);
 
+#endif /* MAIN_H */
