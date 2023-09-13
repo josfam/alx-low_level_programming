@@ -1,6 +1,23 @@
 #include "main.h"
 
-void print_alphabet(void);
+/**
+ * print_alphabet - Prints the alphabet
+ *
+ * Description: Prints the lowercased alphabet from a-z
+ *
+ * Return: Nothing.
+ */
+void print_alphabet(void)
+{
+	int i;
+
+	/* print a-z */
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
+}
 
 /**
  * main - Entry point
@@ -15,14 +32,3 @@ int main(void)
 	return (0);
 }
 
-void print_alphabet(void)
-{
-	int i;
-
-	/* print a-z */
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	_putchar('\n');
-}
