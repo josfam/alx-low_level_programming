@@ -1,7 +1,6 @@
-#include <unistd.h>
-
 /* prints a char to the screen*/
-void _putchar(char ch)
-{
-	write(1, &ch, sizeof(char));
-}
+void _putchar(char ch);
+
+/* prints the lowercase alphabet from a-z */
+void print_alphabet(void);
+
