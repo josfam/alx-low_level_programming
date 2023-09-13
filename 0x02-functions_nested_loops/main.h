@@ -1,5 +1,6 @@
 #ifndef MY_HEADER_H
 #define MY_HEADER_H
+# include <stdio.h>
 
 /* prints a char to the screen*/
 void _putchar(char ch);
@@ -32,7 +33,7 @@ void jack_bauer(void);
 void times_table(void);
 
 /* Adds two integers and returns the result */
-int add(int, int)
+int add(int, int);
 
 /* Prints all natural numbers from n to 98  */
 void print_to_98(int n);
