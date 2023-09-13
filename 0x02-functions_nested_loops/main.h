@@ -32,3 +32,7 @@ void jack_bauer(void);
 void times_table(void);
 
 #endif /* MAIN_H */
+
+/* Adds two integers and returns the result */
+int add(int, int);
+
