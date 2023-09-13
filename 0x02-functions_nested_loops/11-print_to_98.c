@@ -16,13 +16,14 @@ void print_to_98(int n)
 		delta = -1;
 	else
 		delta = 1;
-
+	
+	/* show every number that is not 98 */
 	while (n != 98)
 	{
 		printf("%d, ", n);
 		n += delta;
 	}
-	/* the last number to print is always 98*/
+	/* print the 98 finally */
 	printf("%d\n", n);
 }
 
