@@ -16,7 +16,7 @@ void print_to_98(int n)
 		delta = -1;
 	else
 		delta = 1;
-	
+
 	/* show every number that is not 98 */
 	while (n != 98)
 	{
