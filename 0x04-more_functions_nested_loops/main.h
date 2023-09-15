@@ -55,5 +55,8 @@ void print_most_numbers(void);
 /* prints the numbers, from 0 to 14 ten times */
 void more_numbers(void);
 
+/* Draws a straight line in the terminal */
+void print_line(int n);
+
 #endif /* MAIN_H */
 
