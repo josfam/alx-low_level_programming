@@ -37,6 +37,9 @@ int add(int, int);
 /* Prints all natural numbers from n to 98  */
 void print_to_98(int n);
 
+/* Checks for uppercase character */
+int _isupper(int c);
+
 /* checks for a digit (0 through 9) */
 int _isdigit(int c);
 
