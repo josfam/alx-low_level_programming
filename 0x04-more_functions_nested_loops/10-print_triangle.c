@@ -12,6 +12,12 @@ void print_triangle(int size)
 	int spaces;
 	int hashes;
 
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+
 	for (row = 0; row < size; row++)
 	{
 		/* determine spaces and hashes required for this row */
