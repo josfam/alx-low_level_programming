@@ -16,5 +16,8 @@ int _strlen(char *s);
 /* Prints a string, followed by a new line, to stdout */
 void _puts(char *str);
 
+/* Prints a string, in reverse, followed by a new line. */
+void print_rev(char *s);
+
 #endif /* MAIN_H */
 
