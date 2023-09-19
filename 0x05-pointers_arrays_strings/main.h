@@ -22,5 +22,8 @@ void print_rev(char *s);
 /* Reverses a string */
 void rev_string(char *s);
 
+/* Prints every other character of a string, starting with the first character */
+void puts2(char *str);
+
 #endif /* MAIN_H */
 
