@@ -28,5 +28,8 @@ void puts2(char *str);
 /* Prints half of a string, followed by a new line */
 void puts_half(char *str);
 
+/* Prints n elements of an array of integers, followed by a new line. */
+void print_array(int *a, int n);
+
 #endif /* MAIN_H */
 
