@@ -18,7 +18,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	/* handle n = 0*/
 	if (n == 0)
-		return (src);
+		return (dest);
 
 	/* prepare to append to the dest */
 	while (*destPtr != '\0')
