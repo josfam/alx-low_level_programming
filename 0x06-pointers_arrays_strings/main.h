@@ -10,5 +10,8 @@ char *_strcat(char *dest, char *src);
 /* Concatenates at most n bytes from source to destination string. */
 char *_strncat(char *dest, char *src, int n);
 
+/* Copies at most n bytes from source to destination string, akin to strncpy */
+char *_strncpy(char *dest, char *src, int n);
+
 #endif /* MAIN_H */
 
