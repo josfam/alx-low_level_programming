@@ -13,5 +13,8 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 /* Locates a character in a string. */
 char *_strchr(char *s, char c);
 
+/* Gets the length of the prefix substring. */
+unsigned int _strspn(char *s, char *accept);
+
 #endif /* MAIN_H */
 
