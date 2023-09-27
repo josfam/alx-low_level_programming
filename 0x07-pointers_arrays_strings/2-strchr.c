@@ -19,6 +19,10 @@ char *_strchr(char *s, char c)
 			return (&s[i]);
 	}
 
+	/* Handle c being '\0' */
+	if (c == '\0')
+		return (&s[i]);
+
 	/* The character was not found at this point */
 	return (NULL);
 }
