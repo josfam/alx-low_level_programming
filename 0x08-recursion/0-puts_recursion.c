@@ -11,7 +11,6 @@ void _puts_recursion(char *s)
 	/* we have reached the end of the string. */
 	if (*s == '\0')
 	{
-		_putchar('\0');
 		_putchar('\n');
 	}
 	else
