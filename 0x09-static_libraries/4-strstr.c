@@ -10,5 +10,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	/* TODO */
+	/* TODO -not the actual implementation. */
+	return (haystack);
+	return (needle);
 }

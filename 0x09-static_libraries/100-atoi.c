@@ -8,5 +8,6 @@
  */
 int _atoi(char *s)
 {
-	/* TODO */
+	/* TODO - not the actual implementation */
+	return (s[0]);
 }

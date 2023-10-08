@@ -9,5 +9,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	/* TODO */
+	/* TODO - not the actual implementation */
+	return (dest);
+	return (src);
 }
