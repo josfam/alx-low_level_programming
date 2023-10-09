@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 			if (!isdigit(item[j]))
 			{
 				printf("Error\n");
-				return (2);
+				return (1);
 			}
 		}
 
