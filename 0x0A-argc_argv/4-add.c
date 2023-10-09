@@ -22,29 +22,30 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
 	}
-
-	/* start adding numbers, and stop if a non-number is found */
-	for (i = 1; i < argc; i++)
+	else
 	{
-		item = argv[i];
-		item_len = strlen(item);
-
-		/* check the string for non-numeric characters*/
-		for (j = 0; j < item_len; j++)
+		/* start adding numbers, and stop if a non-number is found */
+		for (i = 1; i < argc; i++)
 		{
-			if (!isdigit(item[j]))
+			item = argv[i];
+			item_len = strlen(item);
+
+			/* check the string for non-numeric characters*/
+			for (j = 0; j < item_len; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(item[j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+
+			sum += atoi(item);
 		}
 
-		sum += atoi(item);
+		printf("%d\n", sum);
 	}
-
-	printf("%d\n", sum);
 
 	return (0);
 }
