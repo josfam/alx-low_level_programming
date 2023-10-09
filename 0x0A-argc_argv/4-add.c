@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	/* "0" if no numbers are passed */
 	if (argc == 1)
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 	}
 	else
 	{
