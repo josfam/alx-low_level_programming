@@ -23,7 +23,7 @@ char *create_array(unsigned int size, char c)
 
 	/* Handle malloc's return */
 	if (ptr == NULL)
-		return (1);
+		return ("Malloc errored!");
 
 	for (i = 0; i < size; i++)
 	{
