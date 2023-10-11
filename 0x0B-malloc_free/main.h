@@ -11,4 +11,7 @@ char *create_array(unsigned int size, char c);
 copy of the string given as a parameter. */
 char *_strdup(char *str);
 
+/* Returns the length of a string. */
+int _strlen(char *s);
+
 #endif /* MAIN_H */
