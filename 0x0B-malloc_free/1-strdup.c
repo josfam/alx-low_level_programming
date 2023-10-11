@@ -16,11 +16,12 @@ char *_strdup(char *str)
 	int lenstr;
 	char *ptr;
 
-	lenstr = _strlen(str);
-	ptr = malloc(sizeof(char) * lenstr);
+	ptr = malloc((sizeof(char) * lenstr) + 1);
 
 	if (str == NULL || ptr == NULL)
 		return (NULL);
+
+	lenstr = _strlen(str);
 
 	/* Copy the str to the memory area */
 	for (i = 0; i < lenstr; i++)
