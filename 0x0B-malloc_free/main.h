@@ -14,4 +14,7 @@ char *_strdup(char *str);
 /* Returns the length of a string. */
 int _strlen(char *s);
 
+/* Concatenates two strings. */
+char *str_concat(char *s1, char *s2);
+
 #endif /* MAIN_H */
