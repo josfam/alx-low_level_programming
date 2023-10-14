@@ -1,0 +1,6 @@
+#ifndef PIDEF
+#define PIDEF
+
+#define PI 3.14159265359
+
+#endif
