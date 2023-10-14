@@ -7,4 +7,10 @@ void _putchar(char ch);
 /* Allocates memory using malloc. */
 void *malloc_checked(unsigned int b);
 
+/* Returns the length of a string. */
+int _strlen(char *s);
+
+/* Concatenates two strings. */
+char *string_nconcat(char *s1, char *s2, unsigned int n);
+
 #endif /* MAIN_H */
