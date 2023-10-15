@@ -11,24 +11,17 @@
  */
 void print_all(const char *const format, ...)
 {
-	int i, foundInvalidChar;
-	char letter;
+	int i, foundBadChar;
 	char *str;
 	va_list allargs;
 
 	va_start(allargs, format);
-
 	i = 0;
 
-	/**
-	 * iterate through the format string, while printing the
-	 * appropriate argument
-	 */
 	while (i < _strlen(format))
 	{
-		foundInvalidChar = 0;
-		letter = format[i];
-		switch (letter)
+		foundBadChar = 0;
+		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(allargs, int));
@@ -40,7 +33,6 @@ void print_all(const char *const format, ...)
 			printf("%f", va_arg(allargs, double));
 			break;
 		case 's':
-			/* handle a NULL string */
 			str = va_arg(allargs, char *);
 			if (str == NULL)
 			{
@@ -50,15 +42,13 @@ void print_all(const char *const format, ...)
 			printf("%s", str);
 			break;
 		default:
-			foundInvalidChar = 1;
+			foundBadChar = 1;
 			break;
 		}
-		/* conditionally print the comma separator */
-		if (format[i + 1] && !foundInvalidChar)
+		if (format[i + 1] && !foundBadChar) /* No comma after the last arg */
 			printf(", ");
 		i++;
 	}
-
 	va_end(allargs);
 	printf("\n");
 }
