@@ -13,4 +13,10 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 /* Prints strings, followed by a new line. */
 void print_strings(const char *separator, const unsigned int n, ...);
 
+/* Prints anything. */
+void print_all(const char *const format, ...);
+
+/* Returns the length of a string. */
+int _strlen(const char *s);
+
 #endif
