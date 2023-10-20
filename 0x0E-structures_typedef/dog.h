@@ -19,4 +19,7 @@ typedef struct dog
 /* Initializes a variable of type dog */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/* Prints a struct dog */
+void print_dog(struct dog *d);
+
 #endif
