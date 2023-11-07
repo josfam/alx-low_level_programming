@@ -5,7 +5,7 @@
 */temp-tests
 
 # For example ...main.c files for testing
-# *main.c
+*main.c
 
 # backup files
 *.swp
