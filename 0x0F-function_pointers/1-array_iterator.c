@@ -8,7 +8,7 @@
  * @size: The size of the array.
  * @action: A pointer to the function that needs to be used.
  * Description: Long desc
- * Return: ...
+ * Return: Nothing.
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
