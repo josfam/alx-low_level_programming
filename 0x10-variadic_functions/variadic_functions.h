@@ -1,0 +1,4 @@
+#ifndef VARIADIC_HEADER
+#define VARIADIC_HEADER
+
+#endif
