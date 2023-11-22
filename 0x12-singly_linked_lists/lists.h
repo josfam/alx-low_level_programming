@@ -1,5 +1,6 @@
 #ifndef LISTS_HEADER
 #define LISTS_HEADER
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
@@ -15,5 +16,8 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+
+/* Prints all the elements of a list_t list */
+size_t print_list(const list_t *h);
 
 #endif
