@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	/* close the file*/
 	closed = close(fd);
-	if (closed == -1)
+	if (closed == -1 || charsRead == -1)
 		return (0);
 
 	return (letterCount);
