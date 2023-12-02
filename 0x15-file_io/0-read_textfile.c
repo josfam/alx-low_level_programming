@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bufferSize = 1;
 	charsRead = read(fd, buff, bufferSize);
 
-	while ((letterCount <= letters) && (charsRead != 0))
+	while ((letterCount < letters) && (charsRead != 0))
 	{
 		written = write(STDOUT_FILENO, buff, bufferSize);
 		if (written == -1) /* Handle a failed write */
