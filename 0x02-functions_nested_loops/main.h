@@ -38,5 +38,14 @@ int add(int, int);
 /* Prints all natural numbers from n to 98  */
 void print_to_98(int n);
 
+/* Prints a triple-digit number */
+void print_triple(int num);
+
+/* prints the n times table, starting with 0.*/
+void print_times_table(int n);
+
+/* Prints a double-digit number */
+void print_double(int result);
+
 #endif /* MAIN_H */
 
