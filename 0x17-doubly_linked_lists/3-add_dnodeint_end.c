@@ -9,7 +9,7 @@
 * Description: Adds a new node at the end of a dlistint_t list.
 * Return: The address of the new element, or NULL if it failed.
 */
-dlistint_t *add_dnodeint_end (dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new, *current;
 
@@ -31,7 +31,7 @@ dlistint_t *add_dnodeint_end (dlistint_t **head, const int n)
 	current = *head;
 
 	/* move to the last node in the list, and add the new node after it */
-	while(current->next != NULL)
+	while (current->next != NULL)
 	{
 		current = current->next;
 	}
