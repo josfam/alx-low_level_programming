@@ -66,5 +66,5 @@ dkms.conf
 /temp-tests
 temp-*
 
-# json
-*.json
+# text editors
+.vscode/*
