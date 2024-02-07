@@ -17,6 +17,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int table_size;
 	hash_node_t *new_node, *current;
 
+	/* key cannot be an empty string */
+	if (strcmp(key, "") == 0)
+		return (0);
+
 	/* calculate the index to put the value */
 	table_size = ht->size;
 	index = key_index((const unsigned char *)key, table_size);
