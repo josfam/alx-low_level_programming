@@ -17,8 +17,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int table_size;
 	hash_node_t *new_node, *current;
 
-	/* key cannot be an empty string */
-	if (!key || strcmp(key, "") == 0)
+	/* key must exist and cannot be an empty string.*/
+	if (!ht || !key || strcmp(key, "") == 0)
+		return (0);
+
+	/* Hash table must exist */
+	if (!ht)
 		return (0);
 
 	/* calculate the index to put the value */
