@@ -42,7 +42,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		tmp = current;
 		while (tmp != NULL) /* overwrite the value of an existing key */
 		{
-			if (strcmp(tmp->key, value) == 0)
+			if (strcmp(tmp->key, key) == 0)
 			{
 				tmp->value = strdup((char *)value);
 				return (0);
