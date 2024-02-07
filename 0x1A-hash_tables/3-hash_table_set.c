@@ -15,14 +15,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
 	unsigned long int table_size;
-	hash_node_t *new_node, *current;
+	hash_node_t *new_node, *current, *tmp;
 
-	/* key must exist and cannot be an empty string.*/
+	/* Hash table and key must exist. Key cannot be an empty string.*/
 	if (!ht || !key || strcmp(key, "") == 0)
-		return (0);
-
-	/* Hash table must exist */
-	if (!ht)
 		return (0);
 
 	/* calculate the index to put the value */
@@ -36,16 +32,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = strdup((char *)key);
 	new_node->value = strdup((char *)value);
 	new_node->next = NULL;
-
 	current = ht->array[index];
 
 	/* if index is unoccupied, add the new_node at that index */
 	if (!current)
-	{
 		ht->array[index] = new_node;
-	}
 	else
 	{
+		tmp = current;
+		while (tmp != NULL) /* overwrite the value of an existing key */
+		{
+			if (strcmp(tmp->key, value) == 0)
+			{
+				tmp->value = strdup((char *)value);
+				return (0);
+			}
+			tmp = tmp->next;
+		}
 		new_node->next = current;
 		ht->array[index] = new_node;
 	}
