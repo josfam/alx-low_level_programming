@@ -14,7 +14,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index, table_size;
-	hash_node_t *new_node, *current, *tmp;
+	hash_node_t *new_node, *current, *prev, *tmp;
 
 	/* Hash table and key must exist. Key cannot be an empty string.*/
 	if (!ht || !key || strcmp(key, "") == 0)
@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!current)
 		ht->array[index] = new_node;
 	else
-	{
+{
 		tmp = current;
 		while (tmp != NULL) /* overwrite the value of an existing key */
 		{
@@ -43,12 +43,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				free(tmp->value); /* free the previous value */
 				tmp->value = strdup((char *)value);
+				free(new_node); /* no new node  was added */
 				return (0);
 			}
+			prev = tmp;
 			tmp = tmp->next;
 		}
-		new_node->next = current;
-		ht->array[index] = new_node;
+		prev->next = new_node;
 	}
 	return (1);
 }
