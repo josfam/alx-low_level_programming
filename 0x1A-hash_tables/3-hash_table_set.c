@@ -44,7 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				free(tmp->value); /* free the previous value */
 				tmp->value = strdup((char *)value);
 				free(new_node); /* no new node  was added */
-				return (0);
+				return (1);
 			}
 			tmp = tmp->next;
 		}
