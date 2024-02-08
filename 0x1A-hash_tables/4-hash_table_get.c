@@ -16,6 +16,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t **table;
 	hash_node_t *current;
 
+	if (ht == NULL) /* Hash table must exist */
+		return (NULL);
+
 	table = ht->array;
 	index = key_index((const unsigned char *)key, ht->size);
 	current = table[index];
