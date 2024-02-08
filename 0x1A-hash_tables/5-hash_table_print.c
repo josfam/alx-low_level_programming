@@ -17,31 +17,33 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		;
 	}
-
-	last_node_index = last_node_location(ht);
-	table = ht->array;
-	size = ht->size;
-
-	printf("{");
-	for (i = 0; i < size; i++)
+	else
 	{
-		current = table[i];
+		last_node_index = last_node_location(ht);
+		table = ht->array;
+		size = ht->size;
 
-		if (table[i] == NULL)
-			continue;
-		else if (!current->next) /* The only node in this location */
+		printf("{");
+		for (i = 0; i < size; i++)
 		{
-			printf("'%s': '%s'", current->key, current->value);
-			/* don't print a comma after the last node */
-			if (i < last_node_index)
-				printf(", ");
+			current = table[i];
+
+			if (table[i] == NULL)
+				continue;
+			else if (!current->next) /* The only node in this location */
+			{
+				printf("'%s': '%s'", current->key, current->value);
+				/* don't print a comma after the last node */
+				if (i < last_node_index)
+					printf(", ");
+			}
+			else
+			{
+				print_kv_nodes(current);
+			}
 		}
-		else
-		{
-			print_kv_nodes(current);
-		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
 
 /**
