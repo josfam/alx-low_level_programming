@@ -9,7 +9,7 @@
 */
 void hash_table_print(const hash_table_t *ht)
 {
-	int i, size, n, last_node_index;
+	int i, size, last_node_index;
 	hash_node_t **table;
 	hash_node_t *current;
 
