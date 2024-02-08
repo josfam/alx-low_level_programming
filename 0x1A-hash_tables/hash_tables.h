@@ -45,4 +45,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /* Retrieves a value associated with a key */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
+/* Prints a hash table */
+void hash_table_print(const hash_table_t *ht);
+
+/* Returns the last index where a node was found in the hash table */
+int last_node_location(const hash_table_t *ht);
+
+/* Prints key-value pairs of connected nodes in a hash table */
+void print_kv_nodes(hash_node_t *current);
+
 #endif
