@@ -37,7 +37,7 @@ void hash_table_print(const hash_table_t *ht)
 				if (i < last_node_index)
 					printf(", ");
 			}
-			else
+			else /* There are linked nodes in this location */
 			{
 				print_kv_nodes(current);
 			}
@@ -81,17 +81,13 @@ int last_node_location(const hash_table_t *ht)
  */
 void print_kv_nodes(hash_node_t *current)
 {
-	int n;
-
-	n = 0;
 	while (current != NULL)
 	{
 		printf("'%s': '%s'", current->key, current->value);
-		if (n)
+		if (current->next) /* no comma after the last node in the link */
 		{
 			printf(", ");
 		}
-		n = 1;
 		current = current->next;
 	}
 }
