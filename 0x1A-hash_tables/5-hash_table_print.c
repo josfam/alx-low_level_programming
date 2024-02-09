@@ -39,7 +39,7 @@ void hash_table_print(const hash_table_t *ht)
 			}
 			else /* There are linked nodes in this location */
 			{
-				print_kv_nodes(current);
+				print_kv_nodes(last_node_index, i, current);
 			}
 		}
 		printf("}\n");
@@ -75,16 +75,24 @@ int last_node_location(const hash_table_t *ht)
 
 /**
  * print_kv_nodes - Prints key-value pairs of connected nodes in a hash table
+ * @last_index: The index that contains the last node in the hash table
+ * @current_index: The current index being visited in the hash table
  * @current: The first node in the connection
  * Description: Prints key-value pairs of connected nodes in a hash table
  * Return: Nothing
  */
-void print_kv_nodes(hash_node_t *current)
+void print_kv_nodes(int last_index, int current_index, hash_node_t *current)
 {
 	while (current != NULL)
 	{
 		printf("'%s': '%s'", current->key, current->value);
-		if (current->next) /* no comma after the last node in the link */
+		if (current_index == last_index)
+		{
+			/* Don't print a comma after the last node in the link */
+			if (current->next)
+				printf(", ");
+		}
+		else
 		{
 			printf(", ");
 		}

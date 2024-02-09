@@ -52,6 +52,6 @@ void hash_table_print(const hash_table_t *ht);
 int last_node_location(const hash_table_t *ht);
 
 /* Prints key-value pairs of connected nodes in a hash table */
-void print_kv_nodes(hash_node_t *current);
+void print_kv_nodes(int last_index, int current_index, hash_node_t *current);
 
 #endif
