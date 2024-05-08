@@ -1,2 +1,5 @@
 # main files
 *-main.c
+
+# editor-specific
+.vscode/
