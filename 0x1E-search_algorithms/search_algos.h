@@ -18,4 +18,8 @@ void print_search_space(int *array, int start, int end);
 /* Jump search algorithm */
 int jump_search(int *array, size_t size, int value);
 
+/* Searches for a value in a sorted array of integers using the */
+/* Interpolation search algorithm */
+int interpolation_search(int *array, size_t size, int value);
+
 #endif
